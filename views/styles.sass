@@ -1,0 +1,137 @@
+=border-radius($r)
+  -webkit-border-radius: $r
+  -moz-border-radius: $r
+  border-radius: $r
+
+=gradient-bg($color1, $color2)
+  background-color: $color1
+  background-image: -moz-linear-gradient(100% 100% 90deg, $color2, $color1)
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($color1), to($color2))
+
+=box-shadow($x)
+  -webkit-box-shadow: $x
+  -moz-box-shadow: $x
+  box-shadow: $x
+  
+body
+  font-family: "Helvetica Neue", Helvetica, Arial 
+  font-weight: bold
+  margin: 0
+  padding: 0
+
+#choice
+  a
+    position: relative
+    display: block
+    height: 50%
+    z-index: 6968
+    text-decoration: none
+    span
+      position: absolute
+      width: 100%
+      top: 50%
+      margin-top: -30px
+      font-size: 60px
+      text-align: center
+      cursor: pointer
+      color: #000
+    &:hover
+      background: #000
+      span
+        color: #fff
+    &:focus
+      outline: none
+    &:active
+      background: #ff0000
+      
+  .or
+    position: absolute
+    top: 50%
+    left: 0
+    width: 100%
+    span
+      position: relative
+      display: block
+      top: -64px
+      width: 120px
+      line-height: 120px
+      height: 120px
+      margin: 0 auto
+      border: 5px solid #fff
+      +border-radius(64px)
+      +box-shadow(0 0 0 2px #000)
+      text-transform: uppercase
+      background: #000
+      font-family: georgia
+      font-size: 20px
+      font-style: italic
+      text-align: center
+      color: #fff
+      z-index: 6969
+
+#results
+  margin: 40px
+  h1
+    font-size: 60px
+    margin: 0
+  h2
+    font-size: 40px
+    margin: 0
+  #graph
+    position: relative
+    width: 100%
+    height: 150px
+    margin: 40px 0
+    .result
+      position: relative
+      float: left
+      margin: 0 20px
+      padding-top: 130px
+      width: 200px
+      text-align: center
+      text-transform: uppercase
+      span
+        position: absolute
+        bottom: 20px
+        display: block
+        background: #000
+        color: #fff
+        padding: 5px 0
+        width: 100%
+
+#ie
+  background: #000
+  color: #fff
+  font-family: georgia
+  font-size: 100px
+  line-height: 120px
+  padding: 10px
+  
+  h1
+    margin: 0
+    font-size: 140px
+    line-height: 140px
+  p
+    margin: 0
+    padding: 30px 0
+  a
+    display: block
+    color: #fff
+    text-decoration: none
+    &:hover
+      color: #ff0000
+  
+#footer
+  z-index: 6970
+  color: #fff
+  font-size: 10px
+  font-weight: bold
+  position: fixed
+  bottom: 0
+  right: 0
+  padding: 4px 10px
+  text-transform: uppercase
+  background: #ff0000
+  text-align: right
+  a
+    color: #fff
