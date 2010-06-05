@@ -1,0 +1,12 @@
+#results 
+  %h1 Thank you for your vote
+  %h2 Here are the results so far
+  #graph
+    .result
+      %span{:style => graph_height(poll, :stairway)}= poll.stairway
+      Stairway
+    .result
+      %span{:style => graph_height(poll, :bohemian)}= poll.bohemian
+      Bohemian
+  %p Thank you for participating in this essential study.
+  %p Soon, so very soon, the great question will be answered once and for all.
