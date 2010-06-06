@@ -1,8 +1,8 @@
 #choice
-  - link_to poll_votes_path(poll), :choice => 'stairway', :method => 'post' do
+  - link_to poll_votes_path(poll, :choice => 'stairway'), :method => 'post' do
     %span STAIRWAY TO HEAVEN
   .or
     %span or
-  - link_to poll_votes_path(poll), :choice => 'bohemian', :method => 'post' do
+  - link_to poll_votes_path(poll, :choice => 'bohemian'), :method => 'post' do
     %span BOHEMIAN RHAPSODY
 
