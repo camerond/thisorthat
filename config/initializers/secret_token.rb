@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random, 
 # no regular words or you'll be exposed to dictionary attacks.
-ActionController::Base.cookie_verifier_secret = '0fb56f5364c4631b20d1d27d0216819baf5c64f2094bda9a14956150493baf12c2ccbf793c0e854044455e36c47cb57e8bcb20521a321079f7ebf026485626b8';
+Rails.application.config.secret_token = 'c1eaf9ab23df4374bb24b102d75931a92996a674a2b3d81d05df7a7e3c63c481ab76f73c091b083219f46de62aa9af07cdac7f5e6999f930911735a5aedf2661'

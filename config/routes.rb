@@ -1,9 +1,7 @@
-ActionController::Routing::Routes.draw do |map|
-
-  map.resources :polls, :only => [:index, :show] do |polls|
-    polls.resources :votes, :only => :create
+ThisOrThat::Application.routes.draw do |map|
+  resources :polls do
+    resources :votes
   end
 
-  map.root :controller => 'polls'
-
+  root :to => "polls#index"
 end
